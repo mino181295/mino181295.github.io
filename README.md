@@ -1,2 +1,2 @@
-# mino181295.github.io
-resume-website
+# Personal website
+This is my personal presentation page, my personal website.
