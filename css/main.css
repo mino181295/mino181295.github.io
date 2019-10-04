@@ -106,7 +106,7 @@ h6 {
 
 .masthead h1 {
   font-family: 'Times New Roman', cursive;
-  font-size: 4.0rem;
+  font-size: 2.25rem;
   color: #fdfaee;
   margin: 0;
   padding: 0;
@@ -114,11 +114,12 @@ h6 {
 
 .masthead h3 {
   font-family: 'DejaVu Sans Mono';
-  font-size: 1.0rem;
+  font-size: .75rem;
   color: #fdfaee;
 }
 
 .masthead .color-text {
+  display: none;
   color: #ecb807;
 }
 
@@ -132,35 +133,42 @@ h6 {
   .masthead h3 {
     font-size: 1.75rem;
   }
+  .masthead .color-text {
+    display: inline-block;
+  }
 }
 
 .masthead .social-link {
   display: block;
-  height: 4.2rem;
-  width: 4.2rem;
-  line-height: 4.2rem;
-  font-size: 2.5rem;
-  -webkit-transition: background-color 0.15s ease-in-out;
+  height: 2.75rem;
+  width: 2.75rem;
+  line-height: 2.75rem;
+  font-size: 1.75rem;
   transition: background-color 0.15s ease-in-out;
-  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 992px) {
+  .masthead .social-link {
+    height: 4.2rem;
+    width: 4.2rem;
+    line-height: 4.2rem;
+    font-size: 2.5rem;
+  }
 }
 
 .masthead .social-link.linkedin:hover {
   background-color: #0077B5;
-  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
 .masthead .social-link.resume:hover {
   background-color: #FDA50F;
-  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
 .masthead .social-link.github:hover {
   background-color: #333;
-  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
@@ -170,16 +178,14 @@ h6 {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   width: 24px;
   height: 24px;
   border-left: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 @-webkit-keyframes bounce {
@@ -196,15 +202,12 @@ h6 {
 
 @keyframes bounce {
   0% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
     transform: rotate(-45deg) translate(0, 0);
   }
   20% {
-    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
     transform: rotate(-45deg) translate(-10px, 10px);
   }
   40% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
     transform: rotate(-45deg) translate(0, 0);
   }
 }
@@ -217,8 +220,10 @@ h6 {
   width: 250px;
   height: 100%;
   -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
-  -webkit-transform: translateX(250px);
   transform: translateX(250px);
   background: #2d3038;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -274,6 +279,9 @@ h6 {
   right: 250px;
   width: 250px;
   -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 
@@ -287,7 +295,6 @@ h6 {
   color: #fff;
   background: rgba(33, 37, 41, 0.1);
   line-height: 50px;
-  -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
   z-index: 999;
 }
@@ -298,7 +305,6 @@ h6 {
 
 .menu-toggle:hover {
   background: #212529;
-  -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
 
@@ -317,9 +323,7 @@ h6 {
 .service-card {
   padding: 1.75rem 1.5rem;
   background-color: #fdfaee;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -336,7 +340,6 @@ h6 {
 
 .callout {
   padding: 2rem 0;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/bg-callout.jpg");
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-callout.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -363,8 +366,6 @@ h6 {
 }
 
 .portfolio-item .caption {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   width: 100%;
@@ -401,7 +402,6 @@ h6 {
     clip-path: inset(0px);
   }
   .portfolio-item .caption .caption-content {
-    -webkit-transition: opacity 0.25s;
     transition: opacity 0.25s;
     margin-left: 5rem;
     margin-right: 5rem;
@@ -452,7 +452,6 @@ a:hover, a:focus, a:active {
 }
 
 .btn {
-  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
   font-weight: 700;
 }

@@ -13,6 +13,11 @@
     ],
     "license": "MIT",
     "author": "Matteo Minardi",
+    "browserslist": [
+        "last 1 version",
+        "> 1%",
+        "IE 10"
+    ],
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.11.2",
         "bootstrap": "4.3.1",
