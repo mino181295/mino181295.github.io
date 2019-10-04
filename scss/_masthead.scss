@@ -1,0 +1,96 @@
+.masthead {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(45deg, fade-out($white, 0.87) 0%, fade-out($white, 0.9) 100%) black;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1 {
+    font-family: 'Times New Roman', cursive;
+    font-size: 4.0rem;
+    color: #fdfaee;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h3 {
+    font-family: 'DejaVu Sans Mono';
+    font-size: 1.0rem;
+    color: #fdfaee;
+  }
+
+  .color-text {
+    color: $secondary;
+  }
+
+  @media (min-width: 992px) {
+    height: 100vh;
+    h1 {
+      font-size: 7.5rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+  
+  }
+  
+  .social-link {
+    display: block;
+    height: 4.2rem;
+    width: 4.2rem;
+    line-height: 4.2rem;
+    font-size: 2.5rem;
+    transition: background-color 0.15s ease-in-out;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+    &.linkedin:hover {
+      background-color: #0077B5;
+      transition: background-color 0.3s ease;
+    }
+    &.resume:hover {
+      background-color: #FDA50F;
+      transition: background-color 0.3s ease;
+    }
+    &.github:hover {
+      background-color: #333;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  #scroll-down a span {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 24px;
+    height: 24px;
+
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes bounce {
+    0% {-webkit-transform: rotate(-45deg) translate(0, 0);    }
+    20% {-webkit-transform: rotate(-45deg) translate(-10px, 10px);    }
+    40% {-webkit-transform: rotate(-45deg) translate(0, 0);    }
+  }
+  @keyframes bounce {
+    0% {transform: rotate(-45deg) translate(0, 0);}
+    20% {transform: rotate(-45deg) translate(-10px, 10px);}
+    40% {transform: rotate(-45deg) translate(0, 0);}
+  }
+
+}

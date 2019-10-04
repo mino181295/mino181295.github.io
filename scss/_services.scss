@@ -1,0 +1,35 @@
+.service-icon {
+  display: block;
+  
+  color: #fdfaee;
+  background-color: $white;
+
+  font-size: 2.25rem;
+  line-height: 7.5rem;
+  
+  height: 7rem;
+  width: 7rem;
+  
+  border-bottom: 1px solid $primary; 
+  background-color: $primary;
+}
+
+.service-card {
+  padding: 1.75rem 1.5rem;
+  background-color: #fdfaee;
+  
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+  h4 {
+    font-size: 1rem;
+    padding-top: 1rem;
+    
+    color: $primary;
+    white-space: nowrap;
+  }
+
+  p {
+    color: $primary;
+  }
+  
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
